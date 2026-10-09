@@ -1,0 +1,423 @@
+{
+  "verifiedAt": "2026-10-09T03:19:22.869Z",
+  "provenance": "fictional fixture extraction with explicit synthetic QA confirmation",
+  "cases": [
+    {
+      "inputName": "event-barcelona-verified.png",
+      "requestId": "resp_017f6218e9585533016ac85cffa48087d1bc4bc17e3d07329a",
+      "confirmedIntent": {
+        "revision": 100,
+        "originAirport": "SAW",
+        "destinationAirports": [
+          "BCN"
+        ],
+        "tripType": "one_way",
+        "outboundDate": "2026-10-24",
+        "returnDate": null,
+        "dateWindow": null,
+        "durationNights": null,
+        "adults": 1,
+        "childAges": [],
+        "budgetMinor": null,
+        "budgetScope": null,
+        "currency": "EUR",
+        "checkedBags": 0,
+        "baggageScope": null,
+        "baggageDirection": null,
+        "noOvernight": true,
+        "maxConnections": null,
+        "departureAfter": null,
+        "arrivalDeadline": "2026-10-24T10:00:00.000Z",
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": null
+      },
+      "totalMatches": 1,
+      "firstOffer": {
+        "id": "sample-SAW-BCN-2026-10-24-0",
+        "provider": "sample",
+        "source": "sample",
+        "itinerary": {
+          "id": "sample-SAW-BCN-2026-10-24-0",
+          "segments": [
+            {
+              "id": "sample-SAW-BCN-2026-10-24-0-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC5191",
+              "origin": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "BCN",
+                "name": "El Prat",
+                "city": "Barcelona",
+                "country": "ES",
+                "timeZone": "Europe/Madrid"
+              },
+              "departureAt": "2026-10-24T04:00:00.000Z",
+              "arrivalAt": "2026-10-24T07:45:00.000Z",
+              "durationMinutes": 225,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            }
+          ],
+          "durationMinutes": 225,
+          "connectionMinutes": [],
+          "overnight": false,
+          "transferType": "direct",
+          "transferSteps": [],
+          "terms": "Illustrative direct flight. Sample fare conditions apply.",
+          "entryRequirements": "not_checked"
+        },
+        "basePrice": {
+          "amountMinor": 9300,
+          "currency": "EUR"
+        },
+        "totalPrice": {
+          "amountMinor": 9300,
+          "currency": "EUR"
+        },
+        "extrasPrice": {
+          "amountMinor": 0,
+          "currency": "EUR"
+        },
+        "priceScope": "party",
+        "partySize": 1,
+        "bundleId": "light",
+        "includedCheckedPieces": 0,
+        "includedCheckedWeightKg": 0,
+        "baggageSummary": "Underseat bag included. No additional checked bag requested.",
+        "requestedExtrasPriced": true,
+        "available": true,
+        "remainingSeats": 9,
+        "expiresAt": "2026-10-09T03:34:22.850Z",
+        "requestFingerprint": "efefdfcc9aa3ede81ce6",
+        "notices": [
+          "Illustrative sample schedule and price."
+        ]
+      },
+      "checks": "date, destination, airport-local event deadline or same-airport connection buffer, and onward price scope passed"
+    },
+    {
+      "inputName": "event-berlin-verified.png",
+      "requestId": "resp_0182071b30fe5b0e016ac85d01688487d1aee55103deb13e96",
+      "confirmedIntent": {
+        "revision": 101,
+        "originAirport": "SAW",
+        "destinationAirports": [
+          "BER"
+        ],
+        "tripType": "one_way",
+        "outboundDate": "2026-10-29",
+        "returnDate": null,
+        "dateWindow": null,
+        "durationNights": null,
+        "adults": 1,
+        "childAges": [],
+        "budgetMinor": null,
+        "budgetScope": null,
+        "currency": "EUR",
+        "checkedBags": 0,
+        "baggageScope": null,
+        "baggageDirection": null,
+        "noOvernight": true,
+        "maxConnections": null,
+        "departureAfter": null,
+        "arrivalDeadline": "2026-10-29T16:30:00.000Z",
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": null
+      },
+      "totalMatches": 2,
+      "firstOffer": {
+        "id": "sample-SAW-BER-2026-10-29-1",
+        "provider": "sample",
+        "source": "sample",
+        "itinerary": {
+          "id": "sample-SAW-BER-2026-10-29-1",
+          "segments": [
+            {
+              "id": "sample-SAW-BER-2026-10-29-1-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC6405",
+              "origin": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "AYT",
+                "name": "Antalya",
+                "city": "Antalya",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "departureAt": "2026-10-29T07:00:00.000Z",
+              "arrivalAt": "2026-10-29T08:20:00.000Z",
+              "durationMinutes": 80,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            },
+            {
+              "id": "sample-SAW-BER-2026-10-29-1-2",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC5459",
+              "origin": {
+                "code": "AYT",
+                "name": "Antalya",
+                "city": "Antalya",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "BER",
+                "name": "Berlin Brandenburg",
+                "city": "Berlin",
+                "country": "DE",
+                "timeZone": "Europe/Berlin"
+              },
+              "departureAt": "2026-10-29T11:00:00.000Z",
+              "arrivalAt": "2026-10-29T14:15:00.000Z",
+              "durationMinutes": 195,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            }
+          ],
+          "durationMinutes": 435,
+          "connectionMinutes": [
+            160
+          ],
+          "overnight": false,
+          "transferType": "through_ticket",
+          "transferSteps": [
+            "Arrive at the stated connection airport.",
+            "Follow transfer signs; the sample through-ticket terms apply.",
+            "Proceed to the onward gate."
+          ],
+          "terms": "Illustrative through-ticket itinerary, same booking group. Baggage terms remain those listed for each segment.",
+          "entryRequirements": "not_checked"
+        },
+        "basePrice": {
+          "amountMinor": 6850,
+          "currency": "EUR"
+        },
+        "totalPrice": {
+          "amountMinor": 6850,
+          "currency": "EUR"
+        },
+        "extrasPrice": {
+          "amountMinor": 0,
+          "currency": "EUR"
+        },
+        "priceScope": "party",
+        "partySize": 1,
+        "bundleId": "light",
+        "includedCheckedPieces": 0,
+        "includedCheckedWeightKg": 0,
+        "baggageSummary": "Underseat bag included. No additional checked bag requested.",
+        "requestedExtrasPriced": true,
+        "available": true,
+        "remainingSeats": 9,
+        "expiresAt": "2026-10-09T03:34:22.862Z",
+        "requestFingerprint": "88d3295647110e14d1b1",
+        "notices": [
+          "Illustrative sample schedule and price."
+        ]
+      },
+      "checks": "date, destination, airport-local event deadline or same-airport connection buffer, and onward price scope passed"
+    },
+    {
+      "inputName": "incoming-flight-verified.png",
+      "requestId": "resp_04522012945b8580016ac85d032a0487d1a6aa1c1a15dd3f7a",
+      "confirmedIntent": {
+        "revision": 102,
+        "originAirport": "LGW",
+        "destinationAirports": [
+          "SAW"
+        ],
+        "tripType": "one_way",
+        "outboundDate": "2026-10-24",
+        "returnDate": null,
+        "dateWindow": null,
+        "durationNights": null,
+        "adults": 1,
+        "childAges": [],
+        "budgetMinor": null,
+        "budgetScope": null,
+        "currency": "EUR",
+        "checkedBags": 0,
+        "baggageScope": null,
+        "baggageDirection": null,
+        "noOvernight": true,
+        "maxConnections": null,
+        "departureAfter": null,
+        "arrivalDeadline": null,
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": {
+          "airline": "British Airways",
+          "flightNumber": "BA-DEMO-101",
+          "arrivalAirport": "LGW",
+          "arrivalAt": "2026-10-24T08:00:00+01:00",
+          "departureAirport": "JFK",
+          "minimumConnectionMinutes": 180,
+          "baggageReclaim": true,
+          "confirmed": true
+        }
+      },
+      "totalMatches": 1,
+      "firstOffer": {
+        "id": "sample-LGW-SAW-2026-10-24-1",
+        "provider": "sample",
+        "source": "sample",
+        "itinerary": {
+          "id": "sample-LGW-SAW-2026-10-24-1",
+          "segments": [
+            {
+              "id": "sample-LGW-SAW-2026-10-24-1-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC5885",
+              "origin": {
+                "code": "LGW",
+                "name": "Gatwick",
+                "city": "London",
+                "country": "GB",
+                "timeZone": "Europe/London"
+              },
+              "destination": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "departureAt": "2026-10-24T12:00:00.000Z",
+              "arrivalAt": "2026-10-24T15:55:00.000Z",
+              "durationMinutes": 235,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            }
+          ],
+          "durationMinutes": 235,
+          "connectionMinutes": [],
+          "overnight": false,
+          "transferType": "independent_incoming",
+          "transferSteps": [
+            "Your incoming flight is booked independently and is not included in this price.",
+            "Confirm the same arrival airport. Reclaim bags if required.",
+            "Complete Pegasus check-in before its deadline; pass security.",
+            "Depart on your selected onward flight."
+          ],
+          "terms": "Separate-ticket self-transfer. No connection protection supplied. Reclaim/recheck may be required. Transfer buffers are planning assumptions, not guarantees.",
+          "entryRequirements": "not_checked"
+        },
+        "basePrice": {
+          "amountMinor": 7000,
+          "currency": "EUR"
+        },
+        "totalPrice": {
+          "amountMinor": 7000,
+          "currency": "EUR"
+        },
+        "extrasPrice": {
+          "amountMinor": 0,
+          "currency": "EUR"
+        },
+        "priceScope": "onward_party",
+        "partySize": 1,
+        "bundleId": "light",
+        "includedCheckedPieces": 0,
+        "includedCheckedWeightKg": 0,
+        "baggageSummary": "Underseat bag included. No additional checked bag requested.",
+        "requestedExtrasPriced": true,
+        "available": true,
+        "remainingSeats": 9,
+        "expiresAt": "2026-10-09T03:34:22.867Z",
+        "requestFingerprint": "f2134246da9b9bf1c2ae",
+        "notices": [
+          "Illustrative sample schedule and price.",
+          "Incoming flight is independently booked and excluded from this total."
+        ]
+      },
+      "checks": "date, destination, airport-local event deadline or same-airport connection buffer, and onward price scope passed"
+    }
+  ]
+}

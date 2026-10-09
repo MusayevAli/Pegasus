@@ -1,0 +1,24 @@
+{
+  "source": "openai",
+  "diagnostics": {
+    "requestId": "3d1d308f-95df-4aa8-a9a3-f9212c085489",
+    "model": "gpt-4.1-mini",
+    "latencyMs": 3432,
+    "validationOutcome": "valid",
+    "providerRequestId": "resp_0e1169d7fa9e229c016ac85ffb1f5887d18341b14192860d95",
+    "attempts": 1
+  },
+  "matches": [],
+  "providerStatuses": [
+    {
+      "id": "resp_0e1169d7fa9e229c016ac85ffb1f5887d18341b14192860d95",
+      "status": "completed",
+      "incompleteDetails": null,
+      "error": null,
+      "hasParsed": true,
+      "refusals": []
+    }
+  ],
+  "verificationStatus": "Superseded diagnostic run. The former prose validator had a semantic/quantity gap; this is not the final acceptance evidence.",
+  "currentEvidence": "final-insight-verification.json"
+}

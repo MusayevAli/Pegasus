@@ -1,0 +1,93 @@
+{
+  "verifiedAt": "2026-10-09T03:18:29.175Z",
+  "results": [
+    {
+      "inputName": "event-barcelona-verified.png",
+      "inputProvenance": "synthetic event document with no personal data",
+      "status": 200,
+      "result": {
+        "revision": 100,
+        "kind": "event",
+        "title": "Design Assembly Conference",
+        "location": "Fira Barcelona, Barcelona, Spain",
+        "airportCandidates": [
+          "BCN"
+        ],
+        "localDate": "2026-10-24",
+        "localTime": "15:00",
+        "year": 2026,
+        "timeZone": "Europe/Madrid",
+        "incomingFlight": null,
+        "unresolved": [],
+        "suggestedArrivalBufferMinutes": 60,
+        "notice": "Confirm the extracted details and suggested buffer before applying them. Airport arrival is not venue arrival; ground travel time is unverified.",
+        "source": "openai",
+        "model": "gpt-4.1-mini",
+        "requestId": "resp_017f6218e9585533016ac85cffa48087d1bc4bc17e3d07329a",
+        "latencyMs": 1815
+      }
+    },
+    {
+      "inputName": "event-berlin-verified.png",
+      "inputProvenance": "synthetic event document with no personal data",
+      "status": 200,
+      "result": {
+        "revision": 101,
+        "kind": "event",
+        "title": "Night of Music Concert",
+        "location": "Arena Berlin, Berlin, Germany",
+        "airportCandidates": [
+          "BER"
+        ],
+        "localDate": "2026-10-29",
+        "localTime": "20:30",
+        "year": 2026,
+        "timeZone": "Europe/Berlin",
+        "incomingFlight": null,
+        "unresolved": [],
+        "suggestedArrivalBufferMinutes": 301,
+        "notice": "Confirm the extracted details and suggested buffer before applying them. Airport arrival is not venue arrival; ground travel time is unverified.",
+        "source": "openai",
+        "model": "gpt-4.1-mini",
+        "requestId": "resp_0182071b30fe5b0e016ac85d01688487d1aee55103deb13e96",
+        "latencyMs": 1722
+      }
+    },
+    {
+      "inputName": "incoming-flight-verified.png",
+      "inputProvenance": "synthetic event document with no personal data",
+      "status": 200,
+      "result": {
+        "revision": 102,
+        "kind": "incoming_flight",
+        "title": null,
+        "location": null,
+        "airportCandidates": [
+          "JFK",
+          "LGW"
+        ],
+        "localDate": "2026-10-24",
+        "localTime": "08:00",
+        "year": 2026,
+        "timeZone": "Europe/London",
+        "incomingFlight": {
+          "airline": "British Airways",
+          "flightNumber": "BA-DEMO-101",
+          "arrivalAirport": "LGW",
+          "arrivalAt": "2026-10-24T08:00:00+01:00",
+          "departureAirport": "JFK",
+          "minimumConnectionMinutes": 180,
+          "baggageReclaim": true,
+          "confirmed": false
+        },
+        "unresolved": [],
+        "suggestedArrivalBufferMinutes": 300,
+        "notice": "Confirm the extracted details and suggested buffer before applying them. Airport arrival is not venue arrival; ground travel time is unverified.",
+        "source": "openai",
+        "model": "gpt-4.1-mini",
+        "requestId": "resp_04522012945b8580016ac85d032a0487d1a6aa1c1a15dd3f7a",
+        "latencyMs": 2211
+      }
+    }
+  ]
+}

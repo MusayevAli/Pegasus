@@ -1,0 +1,69 @@
+{
+  "verifiedAt": "2026-10-09T03:08:02.336Z",
+  "results": [
+    {
+      "inputName": "packing-clothes.jpg",
+      "inputProvenance": "public object photograph, inspected: no faces",
+      "status": 200,
+      "result": {
+        "revision": 100,
+        "summary": "Packed suitcase containing various clothes, a bag, and some items wrapped in plastic.",
+        "items": [
+          {
+            "id": "1",
+            "category": "clothes",
+            "label": "folded clothes including a pair of jeans, different tops, and hats",
+            "visibleCount": 8,
+            "confidence": "high"
+          },
+          {
+            "id": "2",
+            "category": "bag",
+            "label": "small black and white patterned zippered bag",
+            "visibleCount": 1,
+            "confidence": "high"
+          },
+          {
+            "id": "3",
+            "category": "bag",
+            "label": "plastic shopping bags with red and orange print",
+            "visibleCount": 2,
+            "confidence": "high"
+          }
+        ],
+        "uncertainties": [],
+        "source": "openai",
+        "model": "gpt-4.1-mini",
+        "requestId": "resp_06c1736f42af679a016ac85a8b842c87d192c18f902c8b93c3",
+        "latencyMs": 5361,
+        "requiresMeasurements": true
+      }
+    },
+    {
+      "inputName": "packing-laptop.jpg",
+      "inputProvenance": "public object photograph, inspected: no faces",
+      "status": 200,
+      "result": {
+        "revision": 101,
+        "summary": "Visible packing items include one laptop on a desk.",
+        "items": [
+          {
+            "id": "item1",
+            "category": "laptop",
+            "label": "laptop computer",
+            "visibleCount": 1,
+            "confidence": "high"
+          }
+        ],
+        "uncertainties": [
+          "Other items such as coffee cup, pens, notebook, post-it notes, lamp, and plant are present but not packing items."
+        ],
+        "source": "openai",
+        "model": "gpt-4.1-mini",
+        "requestId": "resp_05b846c12a43e3f9016ac85a901fac87d19e6efc8b51f5038c",
+        "latencyMs": 2400,
+        "requiresMeasurements": true
+      }
+    }
+  ]
+}

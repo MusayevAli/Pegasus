@@ -1,0 +1,24 @@
+import {z} from 'zod';
+const assignment=z.object({passengerID:z.string(),segmentID:z.string(),productID:z.string()}).strict();
+export const selectionSchema=z.object({bundle:z.enum(['basic','family','flex']),extras:z.array(assignment).max(108),seats:z.array(z.object({passengerID:z.string(),segmentID:z.string(),seatID:z.string()}).strict()).max(54),meals:z.array(assignment).max(54)}).strict();
+export const quoteRequestSchema=z.object({journeyID:z.enum(['family','us-connection','solo']),adults:z.number().int().min(1).max(8),children:z.number().int().min(0).max(8),roundTrip:z.boolean(),selection:selectionSchema,revision:z.number().int().nonnegative().optional()}).strict().refine(r=>r.adults+r.children<=9,{message:'At most 9 travellers'});
+export type QuoteRequest=z.infer<typeof quoteRequestSchema>;
+export class RuleError extends Error{constructor(public code:string,message:string){super(message);}}
+export const productIDs=['peg-cabin','peg-checked20','peg-checked25','peg-meal-child','peg-meal-veggie','peg-meal-classic','basic','family','flex'];
+export const journeySegments:Record<string,string[]>={family:['family-out','family-in'],'us-connection':['us-external','us-pegasus'],solo:['solo-out']};
+export function calculateQuote(input:QuoteRequest){
+ const {journeyID,adults,children,roundTrip,selection:s}=input;const party=adults+children;
+ if(journeyID!=='family'&&roundTrip)throw new RuleError('unsupported_search','This demo journey supports one-way travel only.');
+ const segments=journeySegments[journeyID]!.filter(s=>roundTrip||s!=='family-in');const peg=segments.filter(s=>s!=='us-external');
+ const passengers=[...Array.from({length:adults},(_,i)=>`adult-${i+1}`),...Array.from({length:children},(_,i)=>`child-${i+1}`)];
+ const child=(id:string)=>id.startsWith('child-');const scope=(p:string,s:string)=>{if(!passengers.includes(p)||!peg.includes(s))throw new RuleError('invalid_scope','Selections must belong to a traveller and supported Pegasus segment.');};
+ if(s.bundle==='family'&&!children)throw new RuleError('bundle_eligibility','Family bundle requires at least one child and adult.');
+ const rate=journeyID==='family'?(roundTrip?[18000,13500]:[9000,6750]):journeyID==='us-connection'?[48000,36000]:[4500,3400];
+ const baseMinor=adults*rate[0]!+children*rate[1]!;const items=[{label:'Demo flight fare',amountMinor:baseMinor}];
+ if(s.bundle!=='basic')items.push({label:`${s.bundle==='family'?'Family':'Flex'} bundle · ${party} travellers × ${peg.length} segments`,amountMinor:party*peg.length*(s.bundle==='family'?4200:6500)});
+ const seen=new Set<string>();const unique=(key:string)=>{if(seen.has(key))throw new RuleError('duplicate_extra','Duplicate assignment or incompatible alternatives.');seen.add(key);};
+ for(const x of s.extras){scope(x.passengerID,x.segmentID);if(!['peg-cabin','peg-checked20','peg-checked25'].includes(x.productID))throw new RuleError('unknown_product','Unsupported baggage product.');unique(`${x.passengerID}:${x.segmentID}:${x.productID==='peg-cabin'?'cabin':'checked'}`);const included=s.bundle==='flex'?25:s.bundle==='family'||x.segmentID==='us-pegasus'?20:0;const value=x.productID==='peg-cabin'?1800:x.productID==='peg-checked20'?(included>=20?0:2500):included>=25?0:included>=20?1000:3500;items.push({label:`${x.productID} · ${x.passengerID} · ${x.segmentID}`,amountMinor:value});}
+ const occupied=new Set<string>();for(const x of s.seats){scope(x.passengerID,x.segmentID);unique(`${x.passengerID}:${x.segmentID}:seat`);if(!/^[1-8][A-F]$/.test(x.seatID)||['2B','3E','5A','7C'].includes(x.seatID))throw new RuleError('invalid_seat','This seat is unavailable.');if(x.seatID.startsWith('1')&&child(x.passengerID))throw new RuleError('seat_eligibility','Children cannot occupy the configured exit-row seats.');const occupancy=`${x.segmentID}:${x.seatID}`;if(occupied.has(occupancy))throw new RuleError('seat_occupied','Two travellers cannot share one seat.');occupied.add(occupancy);items.push({label:`Seat ${x.seatID} · ${x.passengerID} · ${x.segmentID}`,amountMinor:(x.seatID.startsWith('1')?3000:1500)-(s.bundle!=='basic'?1500:0)});}
+ for(const x of s.meals){scope(x.passengerID,x.segmentID);unique(`${x.passengerID}:${x.segmentID}:meal`);if(!['peg-meal-child','peg-meal-veggie','peg-meal-classic'].includes(x.productID))throw new RuleError('unknown_product','Unsupported meal product.');if(x.productID==='peg-meal-child'&&!child(x.passengerID))throw new RuleError('meal_eligibility','Child meal is offered to child travellers only.');items.push({label:`${x.productID} · ${x.passengerID} · ${x.segmentID}`,amountMinor:s.bundle!=='basic'?0:x.productID==='peg-meal-child'?900:x.productID==='peg-meal-veggie'?1200:1400});}
+ const totalMinor=items.reduce((n,i)=>n+i.amountMinor,0);return {currency:'EUR' as const,baseMinor,extrasMinor:totalMinor-baseMinor,totalMinor,inventorySource:'demo' as const,items};
+}

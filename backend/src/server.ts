@@ -1,0 +1,41 @@
+import 'dotenv/config';
+import express,{type Request,type Response,type NextFunction} from 'express';
+import {timingSafeEqual} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import {z,ZodError} from 'zod';
+import {Store} from './db.js';
+import {eventSchema} from './events.js';
+import {analytics,session} from './analytics.js';
+import {seed} from './seed.js';
+import {AIService,guidanceRequest,packingRequest} from './ai.js';
+import {createQuote,pay} from './payments.js';
+import {RuleError} from './pricing.js';
+import {registerV2} from './v2/routes.js';
+import {V2Error} from './v2/schema.js';
+import {makeAnalyticsInsights} from './analytics-insights.js';
+import {registerPersonalizationRoutes} from './personalization.js';
+const equal=(a:string,b:string)=>{const aa=Buffer.from(a),bb=Buffer.from(b);return aa.length===bb.length&&timingSafeEqual(aa,bb);};
+export function createApp(store:Store,options:{adminToken?:string;appToken?:string;remote?:boolean;ai?:AIService}={}){
+ if(options.remote&&(!options.adminToken||!options.appToken))throw new Error('Non-loopback hosting requires ANALYTICS_ADMIN_TOKEN and APP_ACCESS_TOKEN.');
+ const app=express();app.disable('x-powered-by');app.use(express.json({limit:'6mb'}));app.use((_q,r,n)=>{r.setHeader('Cache-Control','no-store');r.setHeader('X-Content-Type-Options','nosniff');n();});
+ const auth=(token:string|undefined)=>(req:Request,res:Response,next:NextFunction)=>{if(token&&!equal(req.headers.authorization??'',`Bearer ${token}`)){res.status(401).json({error:'unauthorized',message:'An access token is required.'});return;}next();};
+ const admin=auth(options.adminToken);const client=auth(options.appToken);
+ const ai=options.ai??new AIService();
+ registerV2(app,store,client);
+ registerPersonalizationRoutes(app,store,client);
+ const filter=(req:Request)=>z.object({provenance:z.enum(['synthetic','demo','live','all']).default('synthetic'),days:z.coerce.number().refine(n=>[7,30,90].includes(n)).default(30)}).parse(req.query);
+ app.get('/api/health',(_req,res)=>res.json({status:'ok',service:'Pegasus TripFit',inventory:'demo',payments:'demo',ai:process.env.OPENAI_API_KEY?'configured':'demo',schemaVersion:1}));
+ app.post(['/api/events','/api/analytics/events'],client,(req,res)=>{const {events}=z.object({events:z.array(eventSchema).min(1).max(200)}).strict().parse(req.body);if(events.some(e=>e.provenance==='synthetic'||e.name==='ticket_issued')){res.status(400).json({error:'untrusted_event',message:'Synthetic fixtures and issued tickets cannot be supplied by clients.'});return;}if(events.some(e=>Date.parse(e.clientTimestamp)>Date.now()+300_000)){res.status(400).json({error:'future_timestamp'});return;}res.json(store.ingest(events));});
+ app.get(['/api/analytics','/api/analytics/metrics'],admin,(req,res)=>{const f=filter(req);res.json(analytics(store,f.provenance,f.days));});
+ app.get('/api/sessions/:id',admin,(req,res)=>{const id=z.string().uuid().parse(req.params.id);const data=session(store,id);if(!data){res.status(404).json({error:'session_not_found'});return;}res.json(data);});
+ app.get('/api/ai/status',client,(_req,res)=>res.json(ai.status()));
+ app.post('/api/ai/plan',client,async(req,res)=>res.json(await ai.plan(guidanceRequest.parse(req.body))));
+ app.post('/api/ai/guidance',client,async(req,res)=>res.json(await ai.guidance(guidanceRequest.parse(req.body))));
+ app.post('/api/ai/packing',client,async(req,res)=>res.json(await ai.packing(packingRequest.parse(req.body))));
+ app.post(['/api/ai/insights','/api/analytics/insights'],admin,async(req,res)=>{const f=filter(req);res.json(await makeAnalyticsInsights(store,f.provenance,f.days));});
+ app.post('/api/quotes',client,(req,res)=>res.json(createQuote(store,req.body)));
+ app.post('/api/payments',client,(req,res)=>res.json(pay(store,req.body)));
+ app.use((error:unknown,_req:Request,res:Response,_next:NextFunction)=>{if(error instanceof V2Error){res.status(error.status).json({error:error.code,message:error.message,retryable:error.retryable,requestId:error.requestId});return;}if(error instanceof ZodError){res.status(400).json({error:'invalid_request',issues:error.issues.map(i=>({path:i.path.join('.'),message:i.message}))});return;}if(error instanceof RuleError){res.status(error.code==='live_provider_unavailable'?503:409).json({error:error.code,message:error.message});return;}if(error instanceof SyntaxError){res.status(400).json({error:'invalid_json'});return;}res.status(500).json({error:'internal_error',message:'Request could not be completed. Retry safely.'});});
+ return app;
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const host=process.env.HOST??'127.0.0.1';const remote=!['127.0.0.1','localhost','::1'].includes(host);const store=new Store(process.env.DB_PATH??'./data/tripfit.sqlite');if(process.env.SEED_ON_START!=='false')seed(store);const app=createApp(store,{remote,adminToken:process.env.ANALYTICS_ADMIN_TOKEN,appToken:process.env.APP_ACCESS_TOKEN});const server=app.listen(Number(process.env.PORT??3001),host,()=>console.log(`TripFit demo backend at http://${host}:${process.env.PORT??3001}. No real tickets or charges.`));for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>server.close(()=>{store.close();process.exit(0);}));}

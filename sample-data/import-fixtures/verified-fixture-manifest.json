@@ -1,0 +1,45 @@
+[
+  {
+    "file": "event-barcelona-verified.png",
+    "contents": [
+      "FICTIONAL TEST DOCUMENT",
+      "Design Assembly",
+      "Conference",
+      "24 October 2026",
+      "15:00 Europe/Madrid",
+      "Fira Barcelona",
+      "Barcelona, Spain"
+    ],
+    "sha256": "928658f88f5ba8caa1b0914f2b0986a4d4fed72c1953e93f44415a7a6dcc115e",
+    "provenance": "Locally generated fictional QA text only, no user document or personal data"
+  },
+  {
+    "file": "event-berlin-verified.png",
+    "contents": [
+      "FICTIONAL TEST DOCUMENT",
+      "Night of Music",
+      "Concert",
+      "29 October 2026",
+      "20:30 Europe/Berlin",
+      "Arena Berlin",
+      "Berlin, Germany"
+    ],
+    "sha256": "842fbb40930df59b59ef58fec5c7fe6660e4b32790ed9954d539940bd3d311cc",
+    "provenance": "Locally generated fictional QA text only, no user document or personal data"
+  },
+  {
+    "file": "incoming-flight-verified.png",
+    "contents": [
+      "FICTIONAL TEST DOCUMENT",
+      "Incoming flight itinerary",
+      "British Airways BA-DEMO-101",
+      "JFK to LGW",
+      "Arrival: 24 October 2026",
+      "08:00 Europe/London",
+      "Separately booked flight",
+      "Collect and re-check baggage"
+    ],
+    "sha256": "54880b7ffb1a3db4a0c83a89a6ce49d9ba3aa8ccb0443e6b2352c9f5f0f9e5d5",
+    "provenance": "Locally generated fictional QA text only, no user document or personal data"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-10-09T03:30:17.339Z",
+  "source": "openai",
+  "model": "gpt-4.1-mini",
+  "requestId": "resp_0cbde5cd5329e5eb016ac85fc7b0cc87d1927c5b762af74ac6",
+  "explanations": [
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+      "explanation": "Choosing this alternative moves your departure to an earlier date with a higher budget and allows overnight travel. Applying this change is your choice."
+    },
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+      "explanation": "This option keeps your original departure date with a higher budget and permits overnight travel. Applying this change is your choice."
+    },
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+      "explanation": "Selecting this alternative delays your departure to a later date, increases your budget, and allows overnight travel. Applying this change is your choice."
+    }
+  ],
+  "candidateIds": [
+    "alternative-sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+    "alternative-sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+    "alternative-sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1"
+  ],
+  "diagnostics": [
+    {
+      "requestId": "resp_0cbde5cd5329e5eb016ac85fc7b0cc87d1927c5b762af74ac6",
+      "status": "completed",
+      "incomplete": null,
+      "cards": [
+        {
+          "id": "alternative-sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+          "explanation": "Choosing this alternative moves your departure to an earlier date with a higher budget and allows overnight travel. Applying this change is your choice."
+        },
+        {
+          "id": "alternative-sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+          "explanation": "This option keeps your original departure date with a higher budget and permits overnight travel. Applying this change is your choice."
+        },
+        {
+          "id": "alternative-sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+          "explanation": "Selecting this alternative delays your departure to a later date, increases your budget, and allows overnight travel. Applying this change is your choice."
+        }
+      ]
+    }
+  ]
+}

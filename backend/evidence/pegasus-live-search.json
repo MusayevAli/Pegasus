@@ -1,0 +1,91 @@
+{
+  "verifiedAt": "2026-10-09T05:21:06.650Z",
+  "inputProvenance": "fictional adult-only read-only route search",
+  "tool": "flight-search",
+  "arguments": {
+    "origin": "SAW",
+    "destination": "BCN",
+    "departureDate": "2026-10-24",
+    "adults": 1,
+    "children": 0,
+    "infants": 0,
+    "nonStop": false,
+    "currency": "EUR",
+    "locale": "en"
+  },
+  "status": 200,
+  "authenticate": null,
+  "packet": {
+    "result": {
+      "_meta": {
+        "bookingUrl": "https://web.flypgs.com/booking?adultCount=1&arrivalPort=BCN&childCount=0&currency=EUR&departureDate=2026-10-24&departurePort=SAW&infantCount=0&language=en"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "SAW→BCN: 2 flights found (2 direct, 0 connecting, 0 promotional)\nSAW→BCN 24.10.2026 10:10-12:50 254.00 €\nSAW→BCN 24.10.2026 12:30-15:10 240.00 €\n\nFor booking details, use the Book on Pegasus button on the flight card."
+        }
+      ],
+      "structuredContent": {
+        "searchParams": {
+          "origin": "SAW",
+          "destination": "BCN",
+          "departureDate": "2026-10-24",
+          "returnDate": null,
+          "isRoundTrip": false
+        },
+        "promotional": [],
+        "direct": [
+          {
+            "type": "one-way",
+            "price": 254,
+            "currency": "EUR",
+            "passengers": 1,
+            "passengerLabel": "1 Adult",
+            "adults": 1,
+            "children": 0,
+            "infants": 0,
+            "outbound": {
+              "date": "24.10.2026",
+              "legs": [
+                {
+                  "origin": "SAW",
+                  "destination": "BCN",
+                  "departureTime": "10:10",
+                  "arrivalTime": "12:50",
+                  "duration": "3h 40m"
+                }
+              ]
+            }
+          },
+          {
+            "type": "one-way",
+            "price": 240,
+            "currency": "EUR",
+            "passengers": 1,
+            "passengerLabel": "1 Adult",
+            "adults": 1,
+            "children": 0,
+            "infants": 0,
+            "outbound": {
+              "date": "24.10.2026",
+              "legs": [
+                {
+                  "origin": "SAW",
+                  "destination": "BCN",
+                  "departureTime": "12:30",
+                  "arrivalTime": "15:10",
+                  "duration": "3h 40m"
+                }
+              ]
+            }
+          }
+        ],
+        "connecting": [],
+        "totalFound": 2
+      }
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  }
+}

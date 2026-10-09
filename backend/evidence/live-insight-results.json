@@ -1,0 +1,195 @@
+{
+  "source": "openai",
+  "insights": [
+    {
+      "id": "baggage-clarity",
+      "title": "Make baggage inclusions easier to compare",
+      "issue": "Travellers return from baggage to compare their choices.",
+      "metric": "3 back actions from baggage across 6 visits",
+      "sampleSize": 3,
+      "cohort": "Baggage step",
+      "hypothesis": "Travellers may be unsure which allowance is already included. Backtracking alone does not establish confusion.",
+      "proposal": "Place a passenger-by-segment baggage inclusion summary on each fare card.",
+      "experiment": "Randomly compare current cards with the inclusion summary.",
+      "successMetric": "Lower baggage-to-fare backtracking, with no increase in review errors.",
+      "evidence": [
+        {
+          "metricKey": "friction.baggage.backtracks",
+          "label": "Baggage back actions",
+          "value": 3
+        },
+        {
+          "metricKey": "friction.baggage.visits",
+          "label": "Baggage visits",
+          "value": 6
+        }
+      ],
+      "source": "rules"
+    },
+    {
+      "id": "search-recovery",
+      "title": "Help travellers recover from unsupported searches",
+      "issue": "Several searches return no available journeys.",
+      "metric": "3 journeys with no results",
+      "sampleSize": 3,
+      "cohort": "Search",
+      "hypothesis": "The selected inventory may not match these requests; sample inventory is not evidence of real airline demand.",
+      "proposal": "Show supported airports and editable, verified alternatives in the empty state.",
+      "experiment": "Compare actionable alternatives with the existing empty state.",
+      "successMetric": "Share of no-result journeys that choose a supported search.",
+      "evidence": [
+        {
+          "metricKey": "gaps.no_results.flowCount",
+          "label": "No-result journeys",
+          "value": 3
+        },
+        {
+          "metricKey": "overview.startedFlows",
+          "label": "Started journeys",
+          "value": 12
+        }
+      ],
+      "source": "rules"
+    },
+    {
+      "id": "keep-allowance",
+      "title": "Continue showing when no extra is needed",
+      "issue": "Keeping the existing allowance is a measurable recommendation outcome.",
+      "metric": "3 retained no-extra recommendations from 3 visible pairs",
+      "sampleSize": 3,
+      "cohort": "Visible keep-allowance journeys",
+      "hypothesis": "Clear allowance guidance may build confidence without increasing spend.",
+      "proposal": "Retain the no-extra recommendation and clarify its dimensions.",
+      "experiment": "Compare allowance explanation styles; do not optimise solely for extras value.",
+      "successMetric": "Fewer baggage corrections at review and stable completion.",
+      "evidence": [
+        {
+          "metricKey": "recommendations.keep_allowance.impressions",
+          "label": "Visible recommendation pairs",
+          "value": 3
+        },
+        {
+          "metricKey": "recommendations.keep_allowance.retained",
+          "label": "Retained at confirmation",
+          "value": 3
+        }
+      ],
+      "source": "rules"
+    }
+  ],
+  "structuredInsights": [
+    {
+      "id": "insight1",
+      "observation": "Repeat visits were recorded during baggage configuration.",
+      "evidenceMetricIds": [
+        "friction.baggage.revisits"
+      ],
+      "hypothesis": "Users might be returning to the baggage configuration step because they are unsure of their selections or because the options are not clearly presented, leading them to revisit and adjust choices.",
+      "proposedChange": "Redesign the baggage configuration interface to provide clearer instructions, preview of selections, and a summary that confirms user choices before proceeding.",
+      "suggestedExperiment": "Conduct an A/B test comparing the current baggage configuration screen against the redesigned version with enhanced clarity and confirmation to see if revisits decrease.",
+      "sampleAdequacy": "adequate",
+      "evidenceNumbers": [
+        {
+          "metricId": "friction.baggage.revisits",
+          "value": 3,
+          "sampleSize": 3,
+          "denominator": 6
+        }
+      ]
+    }
+  ],
+  "metricRecords": [
+    {
+      "id": "overview.startedFlows",
+      "label": "startedFlows",
+      "value": 12,
+      "unit": "count",
+      "sampleSize": 12,
+      "denominator": 12,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "Started journeys"
+    },
+    {
+      "id": "friction.baggage.visits",
+      "label": "baggage: visits",
+      "value": 6,
+      "unit": "count",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    },
+    {
+      "id": "friction.baggage.revisits",
+      "label": "baggage: revisits",
+      "value": 3,
+      "unit": "count",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    },
+    {
+      "id": "friction.baggage.activeMedianMs",
+      "label": "baggage: activeMedianMs",
+      "value": 22000,
+      "unit": "ms",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    },
+    {
+      "id": "friction.baggage.activeP90Ms",
+      "label": "baggage: activeP90Ms",
+      "value": 22000,
+      "unit": "ms",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    },
+    {
+      "id": "friction.baggage.backtracks",
+      "label": "baggage: backtracks",
+      "value": 3,
+      "unit": "count",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    },
+    {
+      "id": "friction.baggage.errors",
+      "label": "baggage: errors",
+      "value": 3,
+      "unit": "count",
+      "sampleSize": 3,
+      "denominator": 6,
+      "windowStart": "2026-09-09T03:34:13.470Z",
+      "windowEnd": "2026-10-09T03:34:13.470Z",
+      "dataSource": "synthetic",
+      "cohort": "baggage"
+    }
+  ],
+  "diagnostics": {
+    "requestId": "b09c8394-ebcd-4eb3-a3a5-236bdb43cbe3",
+    "model": "gpt-4.1-mini",
+    "latencyMs": 2180,
+    "validationOutcome": "valid",
+    "providerRequestId": "resp_069914fa0f29ca9f016ac860b5eaf087d18e96127248e1964e",
+    "attempts": 1
+  }
+}

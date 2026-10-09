@@ -1,0 +1,9 @@
+// Official noauth/readOnlyHint flight-search only. Fictional adult route query; no account/PNR/order.
+import {writeFileSync} from 'node:fs';
+let sessionId;
+async function rpc(id,method,params){const r=await fetch('https://mcp.flypgs.com/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream',...(sessionId?{'Mcp-Session-Id':sessionId}:{})},body:JSON.stringify({jsonrpc:'2.0',id,method,params}),signal:AbortSignal.timeout(25000)});sessionId=r.headers.get('mcp-session-id')??sessionId;const body=await r.text();const packets=body.startsWith('data:')||body.includes('\ndata:')?body.split('\n').filter(l=>l.startsWith('data:')).map(l=>JSON.parse(l.slice(5))):[JSON.parse(body)];return {status:r.status,authenticate:r.headers.get('www-authenticate'),packet:packets.find(p=>p.id===id)??packets[0]};}
+await rpc(1,'initialize',{protocolVersion:'2025-03-26',capabilities:{},clientInfo:{name:'TripFit-live-readonly-test',version:'1.0'}});
+const args=process.argv[2]==='roundtrip'?{origin:'SAW',destination:'BCN',departureDate:'2026-10-24',returnDate:'2026-10-30',adults:2,children:0,infants:0,nonStop:false,currency:'EUR',locale:'en'}:process.argv[2]==='connecting'?{origin:'AYT',destination:'BCN',departureDate:'2026-10-24',adults:1,children:0,infants:0,nonStop:false,currency:'EUR',locale:'en'}:{origin:'SAW',destination:'BCN',departureDate:'2026-10-24',adults:1,children:0,infants:0,nonStop:false,currency:'EUR',locale:'en'};
+const result=await rpc(2,'tools/call',{name:'flight-search',arguments:args});
+const evidence={verifiedAt:new Date().toISOString(),inputProvenance:'fictional adult-only read-only route search',tool:'flight-search',arguments:args,...result};
+writeFileSync(`evidence/pegasus-live-${process.argv[2]??'search'}.json`,JSON.stringify(evidence,null,2));console.log(JSON.stringify(evidence,null,2));

@@ -1,0 +1,90 @@
+{
+  "verifiedAt": "2026-10-09T05:30:15.417Z",
+  "inputProvenance": "three fictional adult-only structured sample-search facts; fresh in-memory profile, no customer data",
+  "factCount": 3,
+  "learning": {
+    "state": "ready",
+    "source": "openai",
+    "message": "OpenAI selected preferences supported by your confirmed travel facts. Review or correct them at any time.",
+    "model": "gpt-4.1-mini",
+    "requestId": "46bb40fb-a384-4029-a119-3f2a44ef4d6c",
+    "latencyMs": 4776
+  },
+  "preferences": [
+    {
+      "id": "4f7627b18eea1177f222d6b5",
+      "key": "maximumStops",
+      "value": 0,
+      "label": "Maximum stops",
+      "evidenceIds": [
+        "b6dcdb47-22fc-4906-8986-3f1b2f3722b3",
+        "f0f9d116-76d9-454b-95f7-0d3702e68e93",
+        "6a1a70ab-25d6-49e3-9ea0-293cb3bca413"
+      ],
+      "confidence": "supported",
+      "source": "openai",
+      "locked": false,
+      "updatedAt": "2026-10-09T05:30:15.417Z"
+    },
+    {
+      "id": "7c78d0af3ab0fb844a1c6dc0",
+      "key": "baggagePreference",
+      "value": "cabin",
+      "label": "Baggage preference",
+      "evidenceIds": [
+        "b6dcdb47-22fc-4906-8986-3f1b2f3722b3",
+        "f0f9d116-76d9-454b-95f7-0d3702e68e93",
+        "6a1a70ab-25d6-49e3-9ea0-293cb3bca413"
+      ],
+      "confidence": "supported",
+      "source": "openai",
+      "locked": false,
+      "updatedAt": "2026-10-09T05:30:15.417Z"
+    },
+    {
+      "id": "a09f9a763ee636f5c312c775",
+      "key": "destinationAirport",
+      "value": "BER",
+      "label": "Destination airport",
+      "evidenceIds": [
+        "b6dcdb47-22fc-4906-8986-3f1b2f3722b3",
+        "f0f9d116-76d9-454b-95f7-0d3702e68e93",
+        "6a1a70ab-25d6-49e3-9ea0-293cb3bca413"
+      ],
+      "confidence": "supported",
+      "source": "openai",
+      "locked": false,
+      "updatedAt": "2026-10-09T05:30:15.417Z"
+    },
+    {
+      "id": "a702d2e9fc9e800798745bfb",
+      "key": "originAirport",
+      "value": "SAW",
+      "label": "Departure airport",
+      "evidenceIds": [
+        "b6dcdb47-22fc-4906-8986-3f1b2f3722b3",
+        "f0f9d116-76d9-454b-95f7-0d3702e68e93",
+        "6a1a70ab-25d6-49e3-9ea0-293cb3bca413"
+      ],
+      "confidence": "supported",
+      "source": "openai",
+      "locked": false,
+      "updatedAt": "2026-10-09T05:30:15.417Z"
+    },
+    {
+      "id": "adf48e85654ce9ffc8f54b4a",
+      "key": "seatPreference",
+      "value": "aisle",
+      "label": "Seat preference",
+      "evidenceIds": [
+        "b6dcdb47-22fc-4906-8986-3f1b2f3722b3",
+        "f0f9d116-76d9-454b-95f7-0d3702e68e93",
+        "6a1a70ab-25d6-49e3-9ea0-293cb3bca413"
+      ],
+      "confidence": "supported",
+      "source": "openai",
+      "locked": false,
+      "updatedAt": "2026-10-09T05:30:15.417Z"
+    }
+  ]
+}

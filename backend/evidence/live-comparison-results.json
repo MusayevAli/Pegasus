@@ -1,0 +1,972 @@
+{
+  "verifiedAt": "2026-10-09T03:28:40.091Z",
+  "inputProvenance": "adult-only synthetic QA search facts",
+  "comparison": {
+    "revision": 3,
+    "offers": [
+      {
+        "id": "sample-SAW-BER-2026-10-18-0__sample-BER-SAW-2026-10-21-1",
+        "provider": "sample",
+        "source": "sample",
+        "itinerary": {
+          "id": "sample-SAW-BER-2026-10-18-0__sample-BER-SAW-2026-10-21-1",
+          "segments": [
+            {
+              "id": "sample-SAW-BER-2026-10-18-0-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC7082",
+              "origin": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "BER",
+                "name": "Berlin Brandenburg",
+                "city": "Berlin",
+                "country": "DE",
+                "timeZone": "Europe/Berlin"
+              },
+              "departureAt": "2026-10-18T04:00:00.000Z",
+              "arrivalAt": "2026-10-18T06:55:00.000Z",
+              "durationMinutes": 175,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            },
+            {
+              "id": "sample-BER-SAW-2026-10-21-1-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC5013",
+              "origin": {
+                "code": "BER",
+                "name": "Berlin Brandenburg",
+                "city": "Berlin",
+                "country": "DE",
+                "timeZone": "Europe/Berlin"
+              },
+              "destination": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "departureAt": "2026-10-21T11:00:00.000Z",
+              "arrivalAt": "2026-10-21T13:55:00.000Z",
+              "durationMinutes": 175,
+              "direction": "return",
+              "ticketGroup": "pegasus-1",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            }
+          ],
+          "durationMinutes": 350,
+          "connectionMinutes": [],
+          "overnight": false,
+          "transferType": "direct",
+          "transferSteps": [],
+          "terms": "Illustrative direct flight. Sample fare conditions apply.",
+          "entryRequirements": "not_checked"
+        },
+        "basePrice": {
+          "amountMinor": 14750,
+          "currency": "EUR"
+        },
+        "totalPrice": {
+          "amountMinor": 19550,
+          "currency": "EUR"
+        },
+        "extrasPrice": {
+          "amountMinor": 4800,
+          "currency": "EUR"
+        },
+        "priceScope": "party",
+        "partySize": 1,
+        "bundleId": "light",
+        "includedCheckedPieces": 0,
+        "includedCheckedWeightKg": 0,
+        "baggageSummary": "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+        "requestedExtrasPriced": true,
+        "available": true,
+        "remainingSeats": 9,
+        "expiresAt": "2026-10-09T03:43:36.482Z",
+        "requestFingerprint": "fe88155cfb996fe511e6",
+        "notices": [
+          "Illustrative sample schedule and price."
+        ]
+      },
+      {
+        "id": "sample-SAW-BER-2026-10-18-1__sample-BER-SAW-2026-10-21-1",
+        "provider": "sample",
+        "source": "sample",
+        "itinerary": {
+          "id": "sample-SAW-BER-2026-10-18-1__sample-BER-SAW-2026-10-21-1",
+          "segments": [
+            {
+              "id": "sample-SAW-BER-2026-10-18-1-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC7519",
+              "origin": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "AYT",
+                "name": "Antalya",
+                "city": "Antalya",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "departureAt": "2026-10-18T07:00:00.000Z",
+              "arrivalAt": "2026-10-18T08:20:00.000Z",
+              "durationMinutes": 80,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            },
+            {
+              "id": "sample-SAW-BER-2026-10-18-1-2",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC1387",
+              "origin": {
+                "code": "AYT",
+                "name": "Antalya",
+                "city": "Antalya",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "destination": {
+                "code": "BER",
+                "name": "Berlin Brandenburg",
+                "city": "Berlin",
+                "country": "DE",
+                "timeZone": "Europe/Berlin"
+              },
+              "departureAt": "2026-10-18T11:00:00.000Z",
+              "arrivalAt": "2026-10-18T14:15:00.000Z",
+              "durationMinutes": 195,
+              "direction": "outbound",
+              "ticketGroup": "pegasus-0",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            },
+            {
+              "id": "sample-BER-SAW-2026-10-21-1-1",
+              "operatingCarrier": "Pegasus Airlines",
+              "flightNumber": "PC5013",
+              "origin": {
+                "code": "BER",
+                "name": "Berlin Brandenburg",
+                "city": "Berlin",
+                "country": "DE",
+                "timeZone": "Europe/Berlin"
+              },
+              "destination": {
+                "code": "SAW",
+                "name": "Sabiha Gökçen",
+                "city": "Istanbul",
+                "country": "TR",
+                "timeZone": "Europe/Istanbul"
+              },
+              "departureAt": "2026-10-21T11:00:00.000Z",
+              "arrivalAt": "2026-10-21T13:55:00.000Z",
+              "durationMinutes": 175,
+              "direction": "return",
+              "ticketGroup": "pegasus-1",
+              "checkedBaggage": {
+                "pieces": 0,
+                "totalWeightKg": 0,
+                "maxPieceWeightKg": 0,
+                "maxLinearCm": 158
+              },
+              "underseat": {
+                "weightKg": 3,
+                "dimensionsCm": [
+                  40,
+                  30,
+                  15
+                ]
+              },
+              "independentlyBooked": false
+            }
+          ],
+          "durationMinutes": 610,
+          "connectionMinutes": [
+            160
+          ],
+          "overnight": false,
+          "transferType": "through_ticket",
+          "transferSteps": [
+            "Arrive at the stated connection airport.",
+            "Follow transfer signs; the sample through-ticket terms apply.",
+            "Proceed to the onward gate."
+          ],
+          "terms": "Illustrative through-ticket itinerary, same booking group. Baggage terms remain those listed for each segment.",
+          "entryRequirements": "not_checked"
+        },
+        "basePrice": {
+          "amountMinor": 12850,
+          "currency": "EUR"
+        },
+        "totalPrice": {
+          "amountMinor": 20050,
+          "currency": "EUR"
+        },
+        "extrasPrice": {
+          "amountMinor": 7200,
+          "currency": "EUR"
+        },
+        "priceScope": "party",
+        "partySize": 1,
+        "bundleId": "light",
+        "includedCheckedPieces": 0,
+        "includedCheckedWeightKg": 0,
+        "baggageSummary": "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+        "requestedExtrasPriced": true,
+        "available": true,
+        "remainingSeats": 9,
+        "expiresAt": "2026-10-09T03:43:36.486Z",
+        "requestFingerprint": "fe88155cfb996fe511e6",
+        "notices": [
+          "Illustrative sample schedule and price."
+        ]
+      }
+    ],
+    "differences": [
+      {
+        "label": "Party total · same confirmed extras",
+        "values": [
+          "EUR 195.50",
+          "EUR 200.50"
+        ]
+      },
+      {
+        "label": "Journey duration",
+        "values": [
+          "350 min",
+          "610 min"
+        ]
+      },
+      {
+        "label": "Connections",
+        "values": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "label": "Overnight travel",
+        "values": [
+          "No",
+          "No"
+        ]
+      },
+      {
+        "label": "Outbound departure · airport local time",
+        "values": [
+          "SAW · 18 Oct 2026, 07:00 (Europe/Istanbul)",
+          "SAW · 18 Oct 2026, 10:00 (Europe/Istanbul)"
+        ]
+      },
+      {
+        "label": "Outbound arrival · airport local time",
+        "values": [
+          "BER · 18 Oct 2026, 08:55 (Europe/Berlin)",
+          "BER · 18 Oct 2026, 16:15 (Europe/Berlin)"
+        ]
+      },
+      {
+        "label": "Return departure · airport local time",
+        "values": [
+          "BER · 21 Oct 2026, 13:00 (Europe/Berlin)",
+          "BER · 21 Oct 2026, 13:00 (Europe/Berlin)"
+        ]
+      },
+      {
+        "label": "Return arrival · airport local time",
+        "values": [
+          "SAW · 21 Oct 2026, 16:55 (Europe/Istanbul)",
+          "SAW · 21 Oct 2026, 16:55 (Europe/Istanbul)"
+        ]
+      },
+      {
+        "label": "Baggage",
+        "values": [
+          "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+          "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity."
+        ]
+      },
+      {
+        "label": "Ticket and transfer terms",
+        "values": [
+          "Illustrative direct flight. Sample fare conditions apply.",
+          "Illustrative through-ticket itinerary, same booking group. Baggage terms remain those listed for each segment."
+        ]
+      }
+    ],
+    "explanation": "The first offer is a direct and shorter flight, better for speed and simplicity. The second includes a connection but departs later, which might suit those preferring a later start despite longer travel time.",
+    "explanationSource": "openai",
+    "model": "gpt-4.1-mini",
+    "requestId": "resp_01ef215756adf582016ac85f64be2487d1bac592581faf9747",
+    "notice": "Factual comparison calculated from the same party and requested extras."
+  },
+  "alternatives": {
+    "revision": 4,
+    "alternatives": [
+      {
+        "id": "alternative-sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+        "offer": {
+          "id": "sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+          "provider": "sample",
+          "source": "sample",
+          "itinerary": {
+            "id": "sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+            "segments": [
+              {
+                "id": "sample-SAW-BER-2026-10-17-2-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC1937",
+                "origin": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "destination": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "departureAt": "2026-10-17T19:00:00.000Z",
+                "arrivalAt": "2026-10-17T21:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "outbound",
+                "ticketGroup": "pegasus-0",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              },
+              {
+                "id": "sample-BER-SAW-2026-10-21-1-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC5013",
+                "origin": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "destination": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "departureAt": "2026-10-21T11:00:00.000Z",
+                "arrivalAt": "2026-10-21T13:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "return",
+                "ticketGroup": "pegasus-1",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              }
+            ],
+            "durationMinutes": 350,
+            "connectionMinutes": [],
+            "overnight": true,
+            "transferType": "direct",
+            "transferSteps": [],
+            "terms": "Illustrative direct flight. Sample fare conditions apply.",
+            "entryRequirements": "not_checked"
+          },
+          "basePrice": {
+            "amountMinor": 13580,
+            "currency": "EUR"
+          },
+          "totalPrice": {
+            "amountMinor": 18380,
+            "currency": "EUR"
+          },
+          "extrasPrice": {
+            "amountMinor": 4800,
+            "currency": "EUR"
+          },
+          "priceScope": "party",
+          "partySize": 1,
+          "bundleId": "light",
+          "includedCheckedPieces": 0,
+          "includedCheckedWeightKg": 0,
+          "baggageSummary": "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+          "requestedExtrasPriced": true,
+          "available": true,
+          "remainingSeats": 3,
+          "expiresAt": "2026-10-09T03:43:38.168Z",
+          "requestFingerprint": "5505047cf91af4020e37",
+          "notices": [
+            "Illustrative sample schedule and price."
+          ]
+        },
+        "changes": [
+          {
+            "field": "outboundDate",
+            "from": "2026-10-18",
+            "to": "2026-10-17"
+          },
+          {
+            "field": "budgetMinor",
+            "from": "100",
+            "to": "18380"
+          },
+          {
+            "field": "noOvernight",
+            "from": "true",
+            "to": "false"
+          }
+        ],
+        "intent": {
+          "revision": 5,
+          "originAirport": "SAW",
+          "destinationAirports": [
+            "BER"
+          ],
+          "tripType": "round_trip",
+          "outboundDate": "2026-10-17",
+          "returnDate": "2026-10-21",
+          "dateWindow": null,
+          "durationNights": null,
+          "adults": 1,
+          "childAges": [],
+          "budgetMinor": 18380,
+          "budgetScope": "party",
+          "currency": "EUR",
+          "checkedBags": 1,
+          "baggageScope": "per_passenger",
+          "baggageDirection": "both",
+          "noOvernight": false,
+          "maxConnections": null,
+          "departureAfter": null,
+          "arrivalDeadline": null,
+          "keepTogether": false,
+          "vegetarian": false,
+          "noAlcohol": false,
+          "meals": false,
+          "lockedFields": [
+            "originAirport",
+            "destinationAirports"
+          ],
+          "unresolved": [],
+          "incomingFlight": null
+        },
+        "explanation": "Review the listed constraint changes before choosing this itinerary.",
+        "requiresConfirmation": true
+      },
+      {
+        "id": "alternative-sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+        "offer": {
+          "id": "sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+          "provider": "sample",
+          "source": "sample",
+          "itinerary": {
+            "id": "sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+            "segments": [
+              {
+                "id": "sample-SAW-BER-2026-10-18-2-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC3033",
+                "origin": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "destination": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "departureAt": "2026-10-18T19:00:00.000Z",
+                "arrivalAt": "2026-10-18T21:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "outbound",
+                "ticketGroup": "pegasus-0",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              },
+              {
+                "id": "sample-BER-SAW-2026-10-21-1-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC5013",
+                "origin": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "destination": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "departureAt": "2026-10-21T11:00:00.000Z",
+                "arrivalAt": "2026-10-21T13:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "return",
+                "ticketGroup": "pegasus-1",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              }
+            ],
+            "durationMinutes": 350,
+            "connectionMinutes": [],
+            "overnight": true,
+            "transferType": "direct",
+            "transferSteps": [],
+            "terms": "Illustrative direct flight. Sample fare conditions apply.",
+            "entryRequirements": "not_checked"
+          },
+          "basePrice": {
+            "amountMinor": 13750,
+            "currency": "EUR"
+          },
+          "totalPrice": {
+            "amountMinor": 18550,
+            "currency": "EUR"
+          },
+          "extrasPrice": {
+            "amountMinor": 4800,
+            "currency": "EUR"
+          },
+          "priceScope": "party",
+          "partySize": 1,
+          "bundleId": "light",
+          "includedCheckedPieces": 0,
+          "includedCheckedWeightKg": 0,
+          "baggageSummary": "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+          "requestedExtrasPriced": true,
+          "available": true,
+          "remainingSeats": 3,
+          "expiresAt": "2026-10-09T03:43:38.170Z",
+          "requestFingerprint": "d879e7d7c5e62a1fd302",
+          "notices": [
+            "Illustrative sample schedule and price."
+          ]
+        },
+        "changes": [
+          {
+            "field": "budgetMinor",
+            "from": "100",
+            "to": "18550"
+          },
+          {
+            "field": "noOvernight",
+            "from": "true",
+            "to": "false"
+          }
+        ],
+        "intent": {
+          "revision": 5,
+          "originAirport": "SAW",
+          "destinationAirports": [
+            "BER"
+          ],
+          "tripType": "round_trip",
+          "outboundDate": "2026-10-18",
+          "returnDate": "2026-10-21",
+          "dateWindow": null,
+          "durationNights": null,
+          "adults": 1,
+          "childAges": [],
+          "budgetMinor": 18550,
+          "budgetScope": "party",
+          "currency": "EUR",
+          "checkedBags": 1,
+          "baggageScope": "per_passenger",
+          "baggageDirection": "both",
+          "noOvernight": false,
+          "maxConnections": null,
+          "departureAfter": null,
+          "arrivalDeadline": null,
+          "keepTogether": false,
+          "vegetarian": false,
+          "noAlcohol": false,
+          "meals": false,
+          "lockedFields": [
+            "originAirport",
+            "destinationAirports"
+          ],
+          "unresolved": [],
+          "incomingFlight": null
+        },
+        "explanation": "Review the listed constraint changes before choosing this itinerary.",
+        "requiresConfirmation": true
+      },
+      {
+        "id": "alternative-sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+        "offer": {
+          "id": "sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+          "provider": "sample",
+          "source": "sample",
+          "itinerary": {
+            "id": "sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+            "segments": [
+              {
+                "id": "sample-SAW-BER-2026-10-19-2-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC3839",
+                "origin": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "destination": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "departureAt": "2026-10-19T19:00:00.000Z",
+                "arrivalAt": "2026-10-19T21:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "outbound",
+                "ticketGroup": "pegasus-0",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              },
+              {
+                "id": "sample-BER-SAW-2026-10-21-1-1",
+                "operatingCarrier": "Pegasus Airlines",
+                "flightNumber": "PC5013",
+                "origin": {
+                  "code": "BER",
+                  "name": "Berlin Brandenburg",
+                  "city": "Berlin",
+                  "country": "DE",
+                  "timeZone": "Europe/Berlin"
+                },
+                "destination": {
+                  "code": "SAW",
+                  "name": "Sabiha Gökçen",
+                  "city": "Istanbul",
+                  "country": "TR",
+                  "timeZone": "Europe/Istanbul"
+                },
+                "departureAt": "2026-10-21T11:00:00.000Z",
+                "arrivalAt": "2026-10-21T13:55:00.000Z",
+                "durationMinutes": 175,
+                "direction": "return",
+                "ticketGroup": "pegasus-1",
+                "checkedBaggage": {
+                  "pieces": 0,
+                  "totalWeightKg": 0,
+                  "maxPieceWeightKg": 0,
+                  "maxLinearCm": 158
+                },
+                "underseat": {
+                  "weightKg": 3,
+                  "dimensionsCm": [
+                    40,
+                    30,
+                    15
+                  ]
+                },
+                "independentlyBooked": false
+              }
+            ],
+            "durationMinutes": 350,
+            "connectionMinutes": [],
+            "overnight": true,
+            "transferType": "direct",
+            "transferSteps": [],
+            "terms": "Illustrative direct flight. Sample fare conditions apply.",
+            "entryRequirements": "not_checked"
+          },
+          "basePrice": {
+            "amountMinor": 13920,
+            "currency": "EUR"
+          },
+          "totalPrice": {
+            "amountMinor": 18720,
+            "currency": "EUR"
+          },
+          "extrasPrice": {
+            "amountMinor": 4800,
+            "currency": "EUR"
+          },
+          "priceScope": "party",
+          "partySize": 1,
+          "bundleId": "light",
+          "includedCheckedPieces": 0,
+          "includedCheckedWeightKg": 0,
+          "baggageSummary": "Underseat bag included. 1 checked piece(s) up to 20 kg per traveller, outbound and return on eligible Pegasus segments. The same bag continuing across connections is not additional capacity.",
+          "requestedExtrasPriced": true,
+          "available": true,
+          "remainingSeats": 3,
+          "expiresAt": "2026-10-09T03:43:38.173Z",
+          "requestFingerprint": "6b4f57a586cd73730b09",
+          "notices": [
+            "Illustrative sample schedule and price."
+          ]
+        },
+        "changes": [
+          {
+            "field": "outboundDate",
+            "from": "2026-10-18",
+            "to": "2026-10-19"
+          },
+          {
+            "field": "budgetMinor",
+            "from": "100",
+            "to": "18720"
+          },
+          {
+            "field": "noOvernight",
+            "from": "true",
+            "to": "false"
+          }
+        ],
+        "intent": {
+          "revision": 5,
+          "originAirport": "SAW",
+          "destinationAirports": [
+            "BER"
+          ],
+          "tripType": "round_trip",
+          "outboundDate": "2026-10-19",
+          "returnDate": "2026-10-21",
+          "dateWindow": null,
+          "durationNights": null,
+          "adults": 1,
+          "childAges": [],
+          "budgetMinor": 18720,
+          "budgetScope": "party",
+          "currency": "EUR",
+          "checkedBags": 1,
+          "baggageScope": "per_passenger",
+          "baggageDirection": "both",
+          "noOvernight": false,
+          "maxConnections": null,
+          "departureAfter": null,
+          "arrivalDeadline": null,
+          "keepTogether": false,
+          "vegetarian": false,
+          "noAlcohol": false,
+          "meals": false,
+          "lockedFields": [
+            "originAirport",
+            "destinationAirports"
+          ],
+          "unresolved": [],
+          "incomingFlight": null
+        },
+        "explanation": "Review the listed constraint changes before choosing this itinerary.",
+        "requiresConfirmation": true
+      }
+    ],
+    "notice": "Choose a proposed change explicitly. Locked requirements remain unchanged. AI explanation unavailable; exact computed changes are shown.",
+    "explanationSource": "deterministic",
+    "model": null,
+    "requestId": null
+  },
+  "noMatchCount": 0,
+  "validated": [
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+      "offerId": "sample-SAW-BER-2026-10-17-2__sample-BER-SAW-2026-10-21-1",
+      "found": true,
+      "changes": [
+        {
+          "field": "outboundDate",
+          "from": "2026-10-18",
+          "to": "2026-10-17"
+        },
+        {
+          "field": "budgetMinor",
+          "from": "100",
+          "to": "18380"
+        },
+        {
+          "field": "noOvernight",
+          "from": "true",
+          "to": "false"
+        }
+      ]
+    },
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+      "offerId": "sample-SAW-BER-2026-10-18-2__sample-BER-SAW-2026-10-21-1",
+      "found": true,
+      "changes": [
+        {
+          "field": "budgetMinor",
+          "from": "100",
+          "to": "18550"
+        },
+        {
+          "field": "noOvernight",
+          "from": "true",
+          "to": "false"
+        }
+      ]
+    },
+    {
+      "id": "alternative-sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+      "offerId": "sample-SAW-BER-2026-10-19-2__sample-BER-SAW-2026-10-21-1",
+      "found": true,
+      "changes": [
+        {
+          "field": "outboundDate",
+          "from": "2026-10-18",
+          "to": "2026-10-19"
+        },
+        {
+          "field": "budgetMinor",
+          "from": "100",
+          "to": "18720"
+        },
+        {
+          "field": "noOvernight",
+          "from": "true",
+          "to": "false"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "analyticsOptOutResetVerified" : true,
+  "analyticsRelaunchIdentityVerified" : true,
+  "analyticsUploaded" : true,
+  "backgroundTimingVerified" : true,
+  "baggageToggleScopeVerified" : true,
+  "completionRelaunchIdempotencyVerified" : true,
+  "currency" : "EUR",
+  "dashboardSessionResponseKeys" : [
+    "events",
+    "id",
+    "label"
+  ],
+  "demoReference" : "DEMO-41683000",
+  "duplicateCheckoutProtected" : true,
+  "flowId" : "8556ADEF-6C05-437B-A052-94C3B52F8FB8",
+  "freshSearchAfterCompletionVerified" : true,
+  "legacyCompletedDraftMigrationVerified" : true,
+  "noChargeOrRealTicket" : true,
+  "offlineQueueCount" : 0,
+  "pendingCheckoutAttemptRestored" : true,
+  "persistedTrips" : 2,
+  "quoteExpiryPrecisionVerified" : true,
+  "secondBookingTotalCents" : 4500,
+  "secondDemoReference" : "DEMO-4BD26913",
+  "secondFlowId" : "62DFC639-41B0-4538-9743-E62A94946B3D",
+  "sessionId" : "E6120AA3-DDBB-4804-9AB2-7B7E390007B9",
+  "totalCents" : 77700,
+  "verification" : "Headless execution of actual native Swift models; iOS UI and Simulator not tested"
+}

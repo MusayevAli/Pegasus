@@ -1,0 +1,43 @@
+SLIDE 1
+[0:00–0:20] Pegasus believes everyone has the right to fly. We built TripFit to make the next step easier: deciding which journey is right for you. It is a native iPhone booking assistant, connected to an airline insights dashboard.
+
+SLIDE 2
+[0:20–0:50] What makes Pegasus, Pegasus? Affordable access, a travel experience people can customise, and digital convenience. Our idea follows those principles. Better assistance should help someone find a workable trip, understand the extras they need and avoid repeating the same decisions. It should never hide the price or take the decision away from them.
+
+SLIDE 3
+[0:50–1:25] The planner starts with how people actually think: get me to Barcelona before this event, within this budget. Type the request or import an invitation or an incoming-flight screenshot. AI extracts the context. The traveller checks the destination, date, time zone and arrival buffer, and locks what matters. Those confirmed details drive search. If nothing matches, the app can explain genuine alternatives without silently changing a locked requirement.
+
+SLIDE 4
+[1:25–1:55] Packing is often the next difficult choice. Take a photo or use a checklist. In real vision tests, different photos produced different item lists. The passenger can correct that list and confirm the measurements. Code then checks the catalogue. The answer can be an added bag, a suitable bundle or no extra at all. That supports the Pegasus model: the passenger pays for what fits their trip. The priced in-app flow currently uses labelled demo inventory.
+
+SLIDE 5
+[1:55–2:20] We connected real Pegasus flight availability. AI explains candidate trade-offs, while provider data and code own schedules and prices. The app never invents a flight to make a search succeed. Public Pegasus access supports search, so a live choice continues on Pegasus. We separately built the native extras, review and confirmation journey using clearly labelled demo inventory.
+
+SLIDE 6
+[2:20–2:50] With permission, TripFit builds a small travel memory from confirmed activity. In our test, three fictional activities supported preferences for aisle seats, cabin baggage and direct flights. What we know about you makes that memory inspectable. AI suggestions link to the underlying activity, and direct corrections belong to the customer. They can change, lock or forget a preference, then explicitly reuse requirements in search.
+
+SLIDE 7
+[2:50–3:20] There are two distinct permissions. Personal memory helps the individual traveller. Product analytics helps Pegasus understand the journey through pseudonymous events and aggregate measures. Stored memory and analytics exclude names, payment details, raw messages and photos. Requested AI analysis still sends the chosen input for processing. Customers can pause memory, inspect their activity, export it or erase it. Deleting personal memory does not automatically delete already uploaded aggregate analytics.
+
+SLIDE 8
+[3:20–3:50] The airline gets a useful learning loop. We record the ordered journey and measure active time, revisits and recommendation outcomes. Code calculates the metrics. AI proposes an explanation and a test tied to those metrics. This actual dashboard example uses synthetic rehearsal data: repeated baggage visits suggest testing a clearer allowance summary. It does not prove confusion, and it does not prove the proposed change will work.
+
+SLIDE 9
+[3:50–4:20] We would test value in the terms that matter for Pegasus: more completed journeys and better-fitting ancillary choices, while protecting correctness and customer control. We are not claiming conversion or revenue gains from rehearsal data. The prototype has a successful Xcode build, 80 backend tests, 58 native booking checks and 26 profile checks. Real Pegasus and OpenAI calls have succeeded. Full device, accessibility and photo-journey acceptance testing remains a pilot prerequisite.
+
+SLIDE 10
+[4:20–4:45] Our ask is a Pegasus product and engineering sponsor for a controlled pilot. Start with one route cohort, connect the authorised booking services and measure whether these improvements help people complete the right journey. The code, runnable Xcode project, backend, dashboard and evidence are in the GitHub repository. TripFit takes the Pegasus promise and makes the choices around flying more personal. Thank you.
+
+JUDGE Q&A
+
+What is live?
+Real Pegasus flight search and real OpenAI text, vision, comparison, preference learning and aggregate insight calls. Live search continues on Pegasus. The complete native extras and checkout flow uses labelled demo inventory and does not charge or issue a ticket.
+
+What does a photo tell you?
+Visible items only. The customer confirms measurements. Code owns catalogue fit and prices.
+
+What data is collected?
+Separate opt-in travel memory stores confirmed structured choices. Separate product analytics stores allowlisted pseudonymous events and active time. Neither stored dataset includes raw prompts, images, names or payments. Selected inputs are still sent for requested AI processing. Profile erasure does not delete already uploaded aggregate analytics.
+
+What remains?
+Authorised live extras, seats, order/payment and ticketing integration. Complete physical-device, accessibility and native photo-journey QA. The final Keychain signing repair requires a native consent retest.

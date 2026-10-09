@@ -1,0 +1,298 @@
+{
+  "verifiedAt": "2026-10-09T03:03:10.264Z",
+  "inputProvenance": "synthetic adult-only QA cases",
+  "inventory": "sample",
+  "payments": "demo",
+  "cases": [
+    {
+      "case": 1,
+      "input": "Synthetic acceptance test, not an actual traveller: two adults, no children. Search SAW to BCN, departing 15 October 2026 and returning 22 October 2026. One checked bag for the whole party in both directions. No overnight travel. EUR 1200 total party budget.",
+      "source": "openai",
+      "model": "gpt-4.1-mini",
+      "requestId": "resp_0e64e3b7b141da64016ac85966575887d1a53394380cf0f705",
+      "latencyMs": 4039,
+      "intent": {
+        "revision": 1,
+        "originAirport": "SAW",
+        "destinationAirports": [
+          "BCN"
+        ],
+        "tripType": "round_trip",
+        "outboundDate": "2026-10-15",
+        "returnDate": "2026-10-22",
+        "dateWindow": null,
+        "durationNights": 7,
+        "adults": 2,
+        "childAges": [],
+        "budgetMinor": 120000,
+        "budgetScope": "party",
+        "currency": "EUR",
+        "checkedBags": 1,
+        "baggageScope": "party",
+        "baggageDirection": "both",
+        "noOvernight": true,
+        "maxConnections": null,
+        "departureAfter": null,
+        "arrivalDeadline": null,
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": null
+      },
+      "resultStatus": 200,
+      "totalMatches": 2,
+      "firstOffers": [
+        {
+          "id": "sample-SAW-BCN-2026-10-15-0__sample-BCN-SAW-2026-10-22-1",
+          "total": {
+            "amountMinor": 41600,
+            "currency": "EUR"
+          },
+          "durationMinutes": 450,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "BCN",
+              "departureAt": "2026-10-15T04:00:00.000Z",
+              "arrivalAt": "2026-10-15T07:45:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "BCN",
+              "destination": "SAW",
+              "departureAt": "2026-10-22T11:00:00.000Z",
+              "arrivalAt": "2026-10-22T14:45:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "sample-SAW-BCN-2026-10-15-0__sample-BCN-SAW-2026-10-22-0",
+          "total": {
+            "amountMinor": 45400,
+            "currency": "EUR"
+          },
+          "durationMinutes": 450,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "BCN",
+              "departureAt": "2026-10-15T04:00:00.000Z",
+              "arrivalAt": "2026-10-15T07:45:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "BCN",
+              "destination": "SAW",
+              "departureAt": "2026-10-22T05:00:00.000Z",
+              "arrivalAt": "2026-10-22T08:45:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": 2,
+      "input": "Synthetic acceptance test, not an actual traveller: one adult, no children. One-way SAW to AYT on 20 October 2026, no checked bags, direct flight only, departure after 10:00 local. EUR 80 total party budget.",
+      "source": "openai",
+      "model": "gpt-4.1-mini",
+      "requestId": "resp_07a5196f953420fc016ac85969767c87d19f6a2a66a6788cb5",
+      "latencyMs": 2878,
+      "intent": {
+        "revision": 2,
+        "originAirport": "SAW",
+        "destinationAirports": [
+          "AYT"
+        ],
+        "tripType": "one_way",
+        "outboundDate": "2026-10-20",
+        "returnDate": null,
+        "dateWindow": null,
+        "durationNights": null,
+        "adults": 1,
+        "childAges": [],
+        "budgetMinor": 8000,
+        "budgetScope": "party",
+        "currency": "EUR",
+        "checkedBags": 0,
+        "baggageScope": null,
+        "baggageDirection": null,
+        "noOvernight": false,
+        "maxConnections": 0,
+        "departureAfter": "10:00",
+        "arrivalDeadline": null,
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": null
+      },
+      "resultStatus": 200,
+      "totalMatches": 2,
+      "firstOffers": [
+        {
+          "id": "sample-SAW-AYT-2026-10-20-1",
+          "total": {
+            "amountMinor": 3510,
+            "currency": "EUR"
+          },
+          "durationMinutes": 80,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "AYT",
+              "departureAt": "2026-10-20T10:00:00.000Z",
+              "arrivalAt": "2026-10-20T11:20:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "sample-SAW-AYT-2026-10-20-2",
+          "total": {
+            "amountMinor": 4410,
+            "currency": "EUR"
+          },
+          "durationMinutes": 80,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "AYT",
+              "departureAt": "2026-10-20T19:00:00.000Z",
+              "arrivalAt": "2026-10-20T20:20:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "input": "Synthetic acceptance test, not an actual traveller: one adult, no children. SAW to BER departing 18 October 2026 and returning 21 October 2026, one checked bag per traveller both ways, no overnight travel, EUR 500 total party budget.",
+      "source": "openai",
+      "model": "gpt-4.1-mini",
+      "requestId": "resp_029b0d591eb15366016ac8596c4bf087d1b2de2261ad497aa4",
+      "latencyMs": 2116,
+      "intent": {
+        "revision": 3,
+        "originAirport": "SAW",
+        "destinationAirports": [
+          "BER"
+        ],
+        "tripType": "round_trip",
+        "outboundDate": "2026-10-18",
+        "returnDate": "2026-10-21",
+        "dateWindow": null,
+        "durationNights": null,
+        "adults": 1,
+        "childAges": [],
+        "budgetMinor": 50000,
+        "budgetScope": "party",
+        "currency": "EUR",
+        "checkedBags": 1,
+        "baggageScope": "per_passenger",
+        "baggageDirection": "both",
+        "noOvernight": true,
+        "maxConnections": null,
+        "departureAfter": null,
+        "arrivalDeadline": null,
+        "keepTogether": false,
+        "vegetarian": false,
+        "noAlcohol": false,
+        "meals": false,
+        "lockedFields": [],
+        "unresolved": [],
+        "incomingFlight": null
+      },
+      "resultStatus": 200,
+      "totalMatches": 4,
+      "firstOffers": [
+        {
+          "id": "sample-SAW-BER-2026-10-18-0__sample-BER-SAW-2026-10-21-1",
+          "total": {
+            "amountMinor": 19550,
+            "currency": "EUR"
+          },
+          "durationMinutes": 350,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "BER",
+              "departureAt": "2026-10-18T04:00:00.000Z",
+              "arrivalAt": "2026-10-18T06:55:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "BER",
+              "destination": "SAW",
+              "departureAt": "2026-10-21T11:00:00.000Z",
+              "arrivalAt": "2026-10-21T13:55:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "sample-SAW-BER-2026-10-18-1__sample-BER-SAW-2026-10-21-1",
+          "total": {
+            "amountMinor": 20050,
+            "currency": "EUR"
+          },
+          "durationMinutes": 610,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "AYT",
+              "departureAt": "2026-10-18T07:00:00.000Z",
+              "arrivalAt": "2026-10-18T08:20:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "AYT",
+              "destination": "BER",
+              "departureAt": "2026-10-18T11:00:00.000Z",
+              "arrivalAt": "2026-10-18T14:15:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "BER",
+              "destination": "SAW",
+              "departureAt": "2026-10-21T11:00:00.000Z",
+              "arrivalAt": "2026-10-21T13:55:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "sample-SAW-BER-2026-10-18-0__sample-BER-SAW-2026-10-21-0",
+          "total": {
+            "amountMinor": 21450,
+            "currency": "EUR"
+          },
+          "durationMinutes": 350,
+          "segments": [
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "SAW",
+              "destination": "BER",
+              "departureAt": "2026-10-18T04:00:00.000Z",
+              "arrivalAt": "2026-10-18T06:55:00.000Z"
+            },
+            {
+              "carrier": "Pegasus Airlines",
+              "origin": "BER",
+              "destination": "SAW",
+              "departureAt": "2026-10-21T05:00:00.000Z",
+              "arrivalAt": "2026-10-21T07:55:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
